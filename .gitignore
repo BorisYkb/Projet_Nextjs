@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Output files
+.next/
+out/
+
+# System files
+.DS_Store
+
+# Env variables
+.env
