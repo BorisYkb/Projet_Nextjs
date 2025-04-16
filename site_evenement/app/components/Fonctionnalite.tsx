@@ -122,7 +122,7 @@ export default function Fonctionnalite() {
 
       <div
         ref={sectionRef}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-25"
       >
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col gap-3">

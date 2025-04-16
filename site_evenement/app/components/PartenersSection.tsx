@@ -104,10 +104,6 @@ export default function PartnersSection() {
             Nous collaborons avec des entreprises innovantes pour créer un impact durable et mesurable.
           </p>
         </div>
-        
-        <div ref={frogRef} className="flex justify-center mb-12">
-          <div className="text-5xl animate-bounce">🐸😁</div>
-        </div>
 
         <div 
           ref={partnersRef}

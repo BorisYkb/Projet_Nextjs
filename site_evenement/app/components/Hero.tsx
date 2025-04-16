@@ -17,42 +17,71 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="bg-gradient-to-br mt-0 pt-15 pb-16 overflow-hidden">
+    <header className="bg-gradient-to-br mt-0 pt-4 pb-10 overflow-hidden">
       <div className="max-w-13xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-25">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-22">
           
           {/* Partie texte (gauche) */}
-          <div 
-            className={`w-full lg:w-1/2 transition-all duration-2000 transform ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+          <div
+            className={`w-full lg:w-1/2 transition-all duration-2000 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
-            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               EventQuorum
             </span>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
               Découvrez une <span className="text-blue-600">nouvelle façon</span> de créer
             </h1>
-            
-            <p className="text-lg text-gray-600 mb-8">
+
+            <p className="text-lg text-gray-600 mb-6">
               Notre plateforme vous offre tous les outils nécessaires pour transformer vos idées en projets concrets et innovants. Commencez dès aujourd'hui.
             </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/decouvrir" 
+
+            {/* Boutons */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Link
+                href="/decouvrir"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl">
                 Découvrir
               </Link>
-              
-              <Link 
-                href="/demo" 
-                className="px-6 py-3 border border-gray-300 hover:border-blue-500 text-gray-800 rounded-lg font-medium transition-colors hover:bg-blue-50">
-                Voir la démo
-              </Link>
+
+              {/* Bouton Watch Video */}
+              <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition">
+                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <span className="text-base font-medium">Watch video</span>
+              </button>
+            </div>
+
+            {/* Statistiques */}
+            <div className="flex gap-10 md:gap-14 mt-8">
+              <div className="text-center md:text-left">
+                <p className="text-xl font-bold">
+                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">14k+</span>
+                </p>
+                <p className="text-sm text-gray-500">Learners</p>
+              </div>
+
+              <div className="text-center md:text-left">
+                <p className="text-xl font-bold">
+                  <span className="bg-gradient-to-r from-red-300 to-red-500 bg-clip-text text-transparent">1.05k+</span>
+                </p>
+                <p className="text-sm text-gray-500">Courses</p>
+              </div>
+
+              <div className="text-center md:text-left">
+                <p className="text-xl font-bold">
+                  <span className="bg-gradient-to-r from-green-300 to-green-500 bg-clip-text text-transparent">59k+</span>
+                </p>
+                <p className="text-sm text-gray-500">Graduates</p>
+              </div>
             </div>
           </div>
+
           
           {/* Image (droite) */}
           <div 
