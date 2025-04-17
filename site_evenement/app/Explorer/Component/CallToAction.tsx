@@ -51,9 +51,6 @@ export default function CallToAction() {
                   </svg>
                 </span>
                 Votre démo personnalisée
-                <span className="absolute -right-1 -top-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold animate-pulse">
-                  !
-                </span>
               </span>
             </Link>
           </div>

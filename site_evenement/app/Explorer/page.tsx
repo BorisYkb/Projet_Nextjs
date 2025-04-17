@@ -7,6 +7,7 @@ import UpcomingEvents from './Component/UpcomingEvents';
 import PastEvents from './Component/PastEvents';
 import CallToAction from './Component/CallToAction';
 
+
 export default function ExplorerPage() {
   // État pour s'assurer que le contenu est visible immédiatement
   const [isClient, setIsClient] = useState(false);

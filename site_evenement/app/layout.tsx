@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from './components/Navbar';
 import ScrollToTop from "./components/ScrollToTop";
+import Flooter from "./components/Footer"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Flooter />
         <ScrollToTop />
       </body>
     </html>

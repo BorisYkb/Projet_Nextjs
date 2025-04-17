@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import EventsSection from "./components/EventsSection";
 import PartenersSection from "./components/PartenersSection";
 import Fonctionnalite from "./components/Fonctionnalite"
+import Invitation from "./components/Invitation"
 
 import Image from "next/image";
 import Link from "next/link";
@@ -64,6 +65,7 @@ export default function Home() {
       <EventsSection />
       <PartenersSection />
       <EventCarousel />
+      <Invitation />
     </main>   
 
   );
