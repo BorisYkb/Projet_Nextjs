@@ -36,13 +36,41 @@ export default function Navbar() {
   };
 
   const eventTypes = [
-    "Conventions",
-    "Conférences",
-    "Cérémonies et remises de prix",
-    "Forums de recrutement et job datings",
-    "Assemblées générales",
-    "Séminaires et Team Building",
-    "Soirées d'entreprises"
+    {
+      id: 1,
+      title: "Conventions",
+      link: "./Prestation/conventions",
+    },
+    {
+      id: 2,
+      title: "Conférences",
+      link: "./Prestation/conferences",
+    },
+    {
+      id: 3,
+      title: "Cérémonies et remises de prix",
+      link: "./Prestation/ceremonies-et-remises-de-prix",
+    },
+    {
+      id: 4,
+      title: "Forums de recrutement et job datings",
+      link: "./Prestation/recrutement-et-job-datings",
+    },
+    {
+      id: 5,
+      title: "Assemblées générales",
+      link: "./Prestation/seminaires-et-team-building",
+    },
+    {
+      id: 6,
+      title: "Séminaires et Team Building",
+      link: "./Prestation/",
+    },
+    {
+      id: 7,
+      title: "Soirées d'entreprises",
+      link: "./Prestation/soirees-entreprises",
+    },
   ];
 
 
@@ -122,11 +150,11 @@ export default function Navbar() {
                 <div className="w-[60%] grid grid-cols-2 gap-6 p-6">
                   {eventTypes.map((type) => (
                     <Link
-                      key={type}
-                      href="#"
+                      key={type.id}
+                      href={type.link}
                       className="block text-sm text-gray-700 dark:text-white hover:text-blue-600 transition"
                     >
-                      {type}
+                      {type.title}
                     </Link>
                   ))}
                 </div>
@@ -198,11 +226,11 @@ export default function Navbar() {
               <div className="pl-4">
                 {eventTypes.map((type) => (
                   <Link
-                    key={type}
-                    href="#"
+                    key={type.id}
+                    href={type.link}
                     className="block px-3 py-2 text-sm text-gray-700 dark:text-white hover:text-blue-600"
                   >
-                    {type}
+                    {type.title}
                   </Link>
                 ))}
               </div>
