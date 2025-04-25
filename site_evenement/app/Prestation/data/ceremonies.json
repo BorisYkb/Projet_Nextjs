@@ -1,0 +1,81 @@
+{
+    "hero": {
+      "title": "Transformez vos cérémonies et remises de prix en moments mémorables",
+      "bgColor": "bg-blue-100",
+      "image": "/images/prestations/ceremonies/hero.jpg"
+    },
+    "introduction": {
+      "text": "Vous souhaitez organiser une cérémonie prestigieuse pour récompenser l'excellence, célébrer des accomplissements ou honorer des contributions remarquables ?",
+      "bgColor": "bg-blue-100"
+    },
+    "features": {
+      "title": "Sublimez votre cérémonie grâce à nos solutions digitales",
+      "items": [
+        "Créez une ambiance de prestige avec nos solutions audiovisuelles",
+        "Gérez efficacement les nominations et les votes",
+        "Offrez une expérience interactive aux participants",
+        "Assurez une diffusion en direct pour les personnes à distance"
+      ],
+      "bgColor": "bg-blue-100"
+    },
+    "reasonsToChoose": {
+      "title": "2 raisons de choisir Eventmaker",
+      "blocks": [
+        {
+          "title": "Gérez vos nominations et votes en toute simplicité",
+          "content": "Notre plateforme facilite la gestion des candidatures, des nominations et des votes. Créez des formulaires personnalisés, collectez les votes du public ou d'un jury et affichez les résultats en temps réel.",
+          "image": "/images/prestations/ceremonies/voting.png",
+          "bgColor": "bg-indigo-50"
+        },
+        {
+          "title": "Offrez une expérience hybride exceptionnelle",
+          "content": "Combinez la présence physique et virtuelle pour toucher un public plus large. Notre solution permet aux participants distants de vivre l'émotion de la cérémonie comme s'ils y étaient.",
+          "image": "/images/prestations/ceremonies/hybrid.png",
+          "bgColor": "bg-purple-50"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir notre solution de cérémonie ?",
+      "items": [
+        {
+          "icon": "trophy",
+          "title": "Gestion des lauréats",
+          "description": "Organisation fluide des remises de prix"
+        },
+        {
+          "icon": "camera",
+          "title": "Production audiovisuelle",
+          "description": "Captation professionnelle de moments clés"
+        },
+        {
+          "icon": "chart-bar",
+          "title": "Analyse des réactions",
+          "description": "Mesure de l'impact émotionnel"
+        },
+        {
+          "icon": "share",
+          "title": "Partage social",
+          "description": "Amplification de votre événement"
+        }
+      ],
+      "bgColor": "bg-indigo-50"
+    },
+    "functionalities": {
+      "title": "Nos fonctionnalités",
+      "items": [
+        {
+          "icon": "award",
+          "title": "Remise de prix"
+        },
+        {
+          "icon": "vote",
+          "title": "Système de vote"
+        },
+        {
+          "icon": "stream",
+          "title": "Diffusion en direct"
+        }
+      ]
+    }
+  }

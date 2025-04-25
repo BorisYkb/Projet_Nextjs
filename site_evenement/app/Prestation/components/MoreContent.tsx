@@ -62,7 +62,7 @@ export default function MoreContent({ isLoaded }: MoreContentProps) {
   ];
 
   return (
-    <div ref={sectionRef} className="bg-gray-100 dark:bg-gray-900 py-16">
+    <div ref={sectionRef} className="bg-white dark:bg-gray-900 py-16">
       <div className="container mx-auto px-6">
         <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-8">
           Vous aimerez aussi

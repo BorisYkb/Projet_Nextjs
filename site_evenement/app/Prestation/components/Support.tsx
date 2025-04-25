@@ -1,15 +1,22 @@
-// app/conference/components/Support.tsx
 "use client";
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-interface SupportProps {
-  isLoaded: boolean;
+// Interface pour les données du composant
+interface SupportData {
+  title: string;
+  paragraphs: string[];
 }
 
-export default function Support({ isLoaded }: SupportProps) {
+// Props du composant
+interface SupportProps {
+  isLoaded: boolean;
+  data: SupportData;
+}
+
+export default function Support({ isLoaded, data }: SupportProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -36,15 +43,16 @@ export default function Support({ isLoaded }: SupportProps) {
     <div ref={sectionRef} className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Vous accompagner à chaque étape</h2>
+          <h2 className="text-3xl font-bold mb-8">{data.title}</h2>
           
-          <p className="text-gray-300 mb-4">
-            Lors de l'organisation de conférences, il est essentiel de construire un programme complet, prendre en compte la gestion de vos invités, et assurer que l'expérience digitale offre une valeur ajoutée à travers une interface personnalisable qui correspond à votre marque et à vos besoins spécifiques.
-          </p>
-          
-          <p className="text-gray-300 mb-8">
-            Avec Eventmaker, laissez-vous guider par nos experts dédiés à la réussite de vos projets et construisez vous aussi des formats variés grâce à notre savoir-faire unique !
-          </p>
+          {data.paragraphs.map((paragraph, index) => (
+            <p 
+              key={index} 
+              className={`text-gray-300 ${index < data.paragraphs.length - 1 ? 'mb-4' : 'mb-8'}`}
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </div>

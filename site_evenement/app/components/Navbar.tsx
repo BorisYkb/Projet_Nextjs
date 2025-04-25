@@ -39,37 +39,37 @@ export default function Navbar() {
     {
       id: 1,
       title: "Conventions",
-      link: "./Prestation/conventions",
+      link: "/Prestation/conventions",
     },
     {
       id: 2,
       title: "Conférences",
-      link: "./Prestation/conferences",
+      link: "/Prestation/conferences",
     },
     {
       id: 3,
       title: "Cérémonies et remises de prix",
-      link: "./Prestation/ceremonies-et-remises-de-prix",
+      link: "/Prestation/ceremonies-et-remises-de-prix",
     },
     {
       id: 4,
       title: "Forums de recrutement et job datings",
-      link: "./Prestation/recrutement-et-job-datings",
+      link: "/Prestation/forums",
     },
     {
       id: 5,
       title: "Assemblées générales",
-      link: "./Prestation/seminaires-et-team-building",
+      link: "/Prestation/assemblees-generales",
     },
     {
       id: 6,
       title: "Séminaires et Team Building",
-      link: "./Prestation/",
+      link: "/Prestation/seminaires",
     },
     {
       id: 7,
       title: "Soirées d'entreprises",
-      link: "./Prestation/soirees-entreprises",
+      link: "/Prestation/soirees-entreprises",
     },
   ];
 
@@ -172,10 +172,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="./Explorer/" className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <Link href="/Explorer/" className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
               Explorer
             </Link>
-            <Link href="./Quinoussommes/" className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+            <Link href="/Quinoussommes/" className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
               Qui sommes-nous ?
             </Link>
           </div>
@@ -237,10 +237,10 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="./Explorer/" className="block text-gray-900 dark:text-white hover:bg-gray-100 px-3  dark:hover:bg-gray-700 py-2 rounded-md text-base font-medium">
+          <Link href="/Explorer/" className="block text-gray-900 dark:text-white hover:bg-gray-100 px-3  dark:hover:bg-gray-700 py-2 rounded-md text-base font-medium">
             Explorer
           </Link>
-          <Link href="./Quinoussommes/" className="block text-gray-900 dark:text-white hover:bg-gray-100  dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+          <Link href="/Quinoussommes/" className="block text-gray-900 dark:text-white hover:bg-gray-100  dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
             Qui sommes-nous ?
           </Link>
           <Link href="/demander_demo" className="block bg-blue-600 text-white dark:text-white dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">

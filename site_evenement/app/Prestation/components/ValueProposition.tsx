@@ -1,17 +1,19 @@
-// app/conference/components/ValueProposition.tsx
-
-
 "use client";
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-interface ValuePropositionProps {
-  isLoaded: boolean;
+interface ValuePropositionData {
+  title: string;
 }
 
-export default function ValueProposition({ isLoaded }: ValuePropositionProps) {
+interface ValuePropositionProps {
+  isLoaded: boolean;
+  data: ValuePropositionData;
+}
+
+export default function ValueProposition({ isLoaded, data }: ValuePropositionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -35,10 +37,10 @@ export default function ValueProposition({ isLoaded }: ValuePropositionProps) {
   }, [isLoaded]);
 
   return (
-    <div ref={sectionRef} className="bg-gray-900 text-white py-16">
+    <div ref={sectionRef} className="dark:bg-gray-900 bg-gray-100 text-gray-900 dark:text-white py-16">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          4 raisons de faire appel à Eventmaker pour vos conférences ou colloques
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+          {data.title}
         </h2>
       </div>
     </div>

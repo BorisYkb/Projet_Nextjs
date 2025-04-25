@@ -1,4 +1,4 @@
-// /Prestation/conferences/page.tsx
+// /Prestation/forum/page.tsx
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -11,9 +11,9 @@ import MoreContent from '../components/MoreContent';
 import CallToAction from '../components/CallToAction';
 
 // Import des données spécifiques à cette page
-import conferencesData from '../data/conferences.json';
+import forumData from '../data/forums.json';
 
-export default function ConferencePage() {
+export default function ForumPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -23,19 +23,19 @@ export default function ConferencePage() {
   return (
     <main className="bg-white">
       {/* Hero Section avec les données spécifiques */}
-      <HeroSection isLoaded={isLoaded} data={conferencesData.hero} />
+      <HeroSection isLoaded={isLoaded} data={forumData.hero} />
 
       {/* Value Proposition avec les données spécifiques */}
-      <ValueProposition isLoaded={isLoaded} data={conferencesData.valueProposition} />
+      <ValueProposition isLoaded={isLoaded} data={forumData.valueProposition} />
 
       {/* Features avec les données spécifiques */}
-      <Features isLoaded={isLoaded} data={conferencesData.features} />
+      <Features isLoaded={isLoaded} data={forumData.features} />
 
       {/* Support Section avec les données spécifiques */}
-      <Support isLoaded={isLoaded} data={conferencesData.support} />
+      <Support isLoaded={isLoaded} data={forumData.support} />
 
       {/* Functionalities avec les données spécifiques */}
-      <Functionalities isLoaded={isLoaded} data={conferencesData.functionalities} />
+      <Functionalities isLoaded={isLoaded} data={forumData.functionalities} />
 
       <section className='m-7'>
         {/* Call To Action - composant fixe */}

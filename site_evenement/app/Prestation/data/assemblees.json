@@ -1,0 +1,81 @@
+{
+    "hero": {
+      "title": "Rendez vos assemblées générales plus engageantes et participatives",
+      "bgColor": "bg-green-100",
+      "image": "/images/prestations/assemblees/hero.jpg"
+    },
+    "introduction": {
+      "text": "Vous souhaitez organiser une assemblée générale efficace, transparente et inclusive qui favorise la participation active de tous les membres ?",
+      "bgColor": "bg-green-100"
+    },
+    "features": {
+      "title": "Optimisez votre assemblée générale grâce à nos solutions digitales",
+      "items": [
+        "Facilitez les votes et les prises de décision collectives",
+        "Partagez les documents et rapports de manière sécurisée",
+        "Organisez des sessions de questions-réponses interactives",
+        "Assurez une participation maximale, même à distance"
+      ],
+      "bgColor": "bg-green-100"
+    },
+    "reasonsToChoose": {
+      "title": "2 raisons de choisir Eventmaker",
+      "blocks": [
+        {
+          "title": "Simplifiez les processus de vote et de quorum",
+          "content": "Notre plateforme sécurisée permet d'organiser des votes électroniques fiables et transparents. Vérifiez facilement le quorum, gérez les procurations et obtenez des résultats instantanés.",
+          "image": "/images/prestations/assemblees/voting-system.png",
+          "bgColor": "bg-emerald-50"
+        },
+        {
+          "title": "Favorisez les échanges constructifs",
+          "content": "Offrez à tous les participants la possibilité de contribuer grâce à nos outils de modération de questions et de prise de parole. Garantissez des débats équilibrés et productifs.",
+          "image": "/images/prestations/assemblees/discussion.png",
+          "bgColor": "bg-teal-50"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir notre solution d'assemblée générale ?",
+      "items": [
+        {
+          "icon": "check-circle",
+          "title": "Conformité légale",
+          "description": "Respect des obligations statutaires"
+        },
+        {
+          "icon": "shield",
+          "title": "Sécurité renforcée",
+          "description": "Protection des données sensibles"
+        },
+        {
+          "icon": "users-group",
+          "title": "Participation inclusive",
+          "description": "Accessibilité pour tous les membres"
+        },
+        {
+          "icon": "document",
+          "title": "Documentation complète",
+          "description": "Archivage et traçabilité"
+        }
+      ],
+      "bgColor": "bg-emerald-50"
+    },
+    "functionalities": {
+      "title": "Nos fonctionnalités",
+      "items": [
+        {
+          "icon": "vote-yesno",
+          "title": "Système de vote"
+        },
+        {
+          "icon": "document-share",
+          "title": "Partage de documents"
+        },
+        {
+          "icon": "chat-question",
+          "title": "Questions-réponses"
+        }
+      ]
+    }
+  }
