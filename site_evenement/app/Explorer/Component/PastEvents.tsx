@@ -5,49 +5,49 @@ export default function PastEvents() {
   const pastEvents = [
     {
       id: 1,
-      title: "Heavent Paris 2024",
+      title: "Assemblée Générale de la Société Générale de Côte d'Ivoire 2024",
       date: "27-28 novembre 2024",
-      location: "Paris, France",
-      imageSrc: "/events/heavent-paris-2024.jpg",
+      location: "Abidjan, Côte d'Ivoire",
+      imageSrc: "/events/ag_sgci_2024.jpeg",
       link: "/events/heavent-paris-2024"
     },
     {
       id: 2,
-      title: "Heavent Paris 2023",
+      title: "Assemblée Générale de ORANGE CI 2023",
       date: "18-19 novembre 2023",
-      location: "Paris, France",
-      imageSrc: "/events/heavent-paris-2023.jpg",
+      location: "Abidjan, Côte d'Ivoire",
+      imageSrc: "/events/ag_orange.jpg",
       link: "/events/heavent-paris-2023"
     },
     {
       id: 3,
-      title: "Conférence européenne de l'UX/UI",
+      title: "Assemblée Générale",
       date: "5-6 juin 2023",
-      location: "Amsterdam, Pays-Bas",
+      location: "Abidjan, Côte d'Ivoire",
       imageSrc: "/events/ux-ui-conference.jpg",
       link: "/events/conference-europeenne-ux-ui"
     },
     {
       id: 4,
-      title: "IMEX Francfort",
+      title: "Assemblée Générale",
       date: "15-17 mai 2023",
-      location: "Francfort, Allemagne",
+      location: "Abidjan, Côte d'Ivoire",
       imageSrc: "/events/imex-frankfurt.jpg",
       link: "/events/imex-frankfurt"
     },
     {
       id: 5,
-      title: "See You There",
+      title: "Assemblée Générale",
       date: "6-7 avril 2023",
-      location: "Bruxelles, Belgique",
+      location: "Abidjan, Côte d'Ivoire",
       imageSrc: "/events/see-you-there.jpg",
       link: "/events/see-you-there"
     },
     {
       id: 6,
-      title: "International Confex",
+      title: "Assemblée Générale",
       date: "1-2 mars 2023",
-      location: "Londres, Royaume-Uni",
+      location: "Abidjan, Côte d'Ivoire",
       imageSrc: "/events/international-confex.jpg",
       link: "/events/international-confex"
     }

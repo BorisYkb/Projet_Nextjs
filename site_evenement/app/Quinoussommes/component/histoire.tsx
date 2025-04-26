@@ -76,7 +76,7 @@ export default function Histoire({ isLoaded }: HistoireProps) {
                             <div className="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">2018</h3>
                                 <p className="text-gray-600">
-                                    Fondation de l'entreprise avec une équipe de trois passionnés du web.
+                                    Fondation de l'entreprise avec une équipe de quelques passionnés du web.
                                 </p>
                             </div>
                             <div className="hidden md:block w-4 h-4 bg-indigo-600 rounded-full border-4 border-indigo-100 z-10"></div>

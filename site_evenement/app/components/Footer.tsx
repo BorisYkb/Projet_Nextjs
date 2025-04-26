@@ -172,15 +172,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
-                <span>123 Avenue des Événements, 75000 Paris, France</span>
+                <span>Rivera 2 / Pharmacie SPRING, Cocody Abidjan, Côte d'Ivoire</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                <span>+33 (0)1 23 45 67 89</span>
+                <span>+225 01 41 95 03 52</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                <a href="mailto:contact@eventpro.com" className="hover:text-blue-300 transition-colors">contact@eventpro.com</a>
+                <a href="mailto:infos@quorumenligne.com" className="hover:text-blue-300 transition-colors">infos@quorumenligne.com</a>
               </div>
             </div>
             

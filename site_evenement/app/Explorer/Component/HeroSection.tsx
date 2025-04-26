@@ -36,7 +36,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <div className="py-30 bg-gray-100 dark:bg-gray-700 pt-40">
+        <div className="py-30 bg-gray-100 dark:bg-gray-700 pt-30">
             <div ref={titleRef} className="container mx-auto px-4 text-center">
                 {/* Titre principal avec dégradé de couleur */}
                 <div className="max-w-4xl mx-auto">
@@ -50,8 +50,8 @@ export default function HeroSection() {
                     {/* Sous-titre */}
                     <div className="subtitle mt-12 max-w-4xl mx-auto ${!isClient ? 'opacity-100' : 'opacity-0'}">
                         <p className="text-base md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
-                            <span className='font-bold'>Chez Eventmaker, les événements nous font vibrer peu importe leurs formats.</span>
-                            Rencontrons-nous et faisons connaissances sur un des événements auquel nous participons à travers le monde
+                            <span className='font-bold'>Chez EventQuorum, les événements nous font vibrer peu importe leurs formats.</span>
+                            Rencontrons-nous et faisons connaissances sur des événements auquel nous participons à travers la Côte d'Ivoire.
                         </p>
                     </div>
                 </div>
