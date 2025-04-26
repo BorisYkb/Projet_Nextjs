@@ -1,12 +1,13 @@
 {
     "hero": {
+      "breadcrumb": "Événement / Soirées d'entreprise",
       "title": "Créez des soirées d'entreprise exceptionnelles et mémorables",
       "bgColor": "bg-purple-100",
-      "image": "/images/prestations/soirees/hero.jpg"
+      "image": "/images/soirees/hero.jpg"
     },
     "introduction": {
       "text": "Vous souhaitez organiser une soirée d'entreprise qui renforce la cohésion d'équipe, célèbre les succès ou marque un événement important dans la vie de votre organisation ?",
-      "bgColor": "bg-purple-100"
+      "bgColor": "bg-white-100"
     },
     "features": {
       "title": "Rendez votre soirée inoubliable grâce à nos solutions digitales",
@@ -19,18 +20,18 @@
       "bgColor": "bg-purple-100"
     },
     "reasonsToChoose": {
-      "title": "2 raisons de choisir Eventmaker",
+      "title": "2 raisons de choisir EventQuorum",
       "blocks": [
         {
           "title": "Personnalisez l'expérience de chaque invité",
           "content": "Notre plateforme permet de créer des parcours personnalisés pour vos invités en fonction de leurs préférences, de leur département ou de leur ancienneté. Offrez une expérience unique qui répond aux attentes de chacun.",
-          "image": "/images/prestations/soirees/personalization.png",
+          "image": "/images/soirees/personalization.jpg",
           "bgColor": "bg-fuchsia-50"
         },
         {
           "title": "Créez des moments d'interaction ludiques",
           "content": "Intégrez des activités interactives comme des quiz, des défis d'équipe ou des jeux collaboratifs. Renforcez la cohésion et créez des souvenirs mémorables pour tous les participants.",
-          "image": "/images/prestations/soirees/interactive.png",
+          "image": "/images/soirees/interactive.jpg",
           "bgColor": "bg-violet-50"
         }
       ]
@@ -39,22 +40,22 @@
       "title": "Pourquoi choisir notre solution pour votre soirée ?",
       "items": [
         {
-          "icon": "star",
+          "icon": ["star","text-purple-400"],
           "title": "Animation premium",
           "description": "Des activités originales et engageantes"
         },
         {
-          "icon": "camera",
+          "icon": ["camera","text-yellow-400"],
           "title": "Photobooth digital",
           "description": "Création de souvenirs personnalisés"
         },
         {
-          "icon": "music",
+          "icon": ["music","text-orage-400"],
           "title": "Ambiance sonore",
           "description": "Playlists adaptées à chaque moment"
         },
         {
-          "icon": "confetti",
+          "icon": ["confetti","text-blue-400"],
           "title": "Moments surprises",
           "description": "Expériences mémorables garanties"
         }
@@ -65,16 +66,19 @@
       "title": "Nos fonctionnalités",
       "items": [
         {
-          "icon": "calendar-event",
-          "title": "Planification"
+          "icon": ["calendar-event","text-purple-400"],
+          "title": "Planification",
+          "link": "fonctionnalite-3"
         },
         {
-          "icon": "game",
-          "title": "Activités ludiques"
+          "icon": ["game","text-green-400"],
+          "title": "Activités ludiques",
+          "link": "fonctionnalite-3"
         },
         {
-          "icon": "camera-polaroid",
-          "title": "Souvenirs partagés"
+          "icon": ["camera-polaroid","text-pink-400"],
+          "title": "Souvenirs partagés",
+          "link": "fonctionnalite-3"
         }
       ]
     }

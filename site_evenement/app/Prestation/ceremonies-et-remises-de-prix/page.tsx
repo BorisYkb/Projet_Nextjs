@@ -22,6 +22,7 @@ export default function CeremoniesPage() {
   return (
     <main className="min-h-screen">
       <Hero 
+        breadcrumb={ceremoniesData.hero.breadcrumb}
         title={ceremoniesData.hero.title} 
         bgColor={ceremoniesData.hero.bgColor} 
         image={ceremoniesData.hero.image} 

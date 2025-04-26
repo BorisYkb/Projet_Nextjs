@@ -10,6 +10,7 @@ import {
 interface FunctionalityItem {
   icon: string[];
   title: string;
+  link: string;
 }
 
 interface FunctionalitiesSectionProps {
@@ -130,18 +131,19 @@ export default function FunctionalitiesSection({ title, items }: Functionalities
         
         <div className="flex flex-wrap justify-center gap-10 mb-12">
           {items.map((item, index) => (
-            <div 
+            <a 
+              href={item.link}
               key={index}
               ref={el => itemsRef.current[index] = el}
-              className="flex flex-col items-center hover:bg-gray-800 p-5 transition"
+              className="flex flex-col items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-5 transition"
             >
               <div className="bg-white dark:bg-gray-700 rounded-full p-4 shadow-md mb-3">
                 {renderIcon(item.icon)}
               </div>
-              <span className="text-gray-700 dark:text-gray-200 font-medium">
+              <span className="text-gray-700  dark:text-gray-200 font-medium">
                 {item.title}
               </span>
-            </div>
+            </a>
           ))}
         </div>
         

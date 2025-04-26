@@ -3,54 +3,52 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PartyPopper, Rocket, Star } from 'lucide-react';
 
 export default function CallToAction() {
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const ctaRef = useRef(null);
+  const contentRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
-    // Animation for the container
+
     if (ctaRef.current) {
       gsap.fromTo(
         ctaRef.current,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
+          duration: 1,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: ctaRef.current,
             start: 'top 80%',
-            toggleActions: 'play none none none'
-          }
+            toggleActions: 'play none none none',
+          },
         }
       );
     }
-    
-    // Animation for the content
+
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current,
         { opacity: 0 },
         {
           opacity: 1,
-          duration: 0.8,
-          delay: 0.2,
-          ease: 'power2.out',
+          duration: 1,
+          delay: 0.3,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: contentRef.current,
             start: 'top 85%',
-            toggleActions: 'play none none none'
-          }
+            toggleActions: 'play none none none',
+          },
         }
       );
     }
-    
-    // Animation for the button
+
     if (buttonRef.current) {
       gsap.fromTo(
         buttonRef.current,
@@ -58,46 +56,49 @@ export default function CallToAction() {
         {
           opacity: 1,
           scale: 1,
-          duration: 0.6,
-          delay: 0.4,
-          ease: 'back.out(1.5)',
+          duration: 0.8,
+          delay: 0.5,
+          ease: 'back.out(1.7)',
           scrollTrigger: {
             trigger: buttonRef.current,
             start: 'top 90%',
-            toggleActions: 'play none none none'
-          }
+            toggleActions: 'play none none none',
+          },
         }
       );
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
-    <section 
+    <section
       ref={ctaRef}
-      className="w-full bg-blue-600 dark:bg-blue-800 py-16 px-4 md:px-8 lg:px-16"
+      className="relative overflow-hidden bg-gradient-to-r from-green-400 to-indigo-400 text-white rounded-3xl shadow-2xl p-8 my-10 mx-auto max-w-6xl"
     >
-      <div className="max-w-6xl mx-auto">
-        <div 
-          ref={contentRef}
-          className="text-center"
+      {/* Icônes décoratives */}
+      <PartyPopper className="absolute top-5 left-5 w-10 h-10 opacity-20" />
+      <Rocket className="absolute bottom-5 right-5 w-12 h-12 opacity-20" />
+      <Star className="absolute top-1/2 left-1/2 w-16 h-16 opacity-10 -translate-x-1/2 -translate-y-1/2" />
+
+      {/* Contenu */}
+      <div ref={contentRef} className="flex flex-col items-center text-center space-y-6">
+        <h2 className="text-4xl font-extrabold flex items-center gap-3">
+          🚀 Prêt à organiser votre prochain événement ?
+        </h2>
+
+        <p className="text-lg max-w-2xl">
+          Nos experts sont à votre disposition pour créer un événement sur mesure qui répondra à tous vos objectifs.
+        </p>
+
+        <button
+          ref={buttonRef}
+          className="mt-6 bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-            Prêt à organiser votre prochain événement ?
-          </h2>
-          <p className="text-lg text-blue-100 mb-10 max-w-3xl mx-auto">
-            Nos experts sont à votre disposition pour vous accompagner dans la création d'un événement sur mesure qui répondra à vos objectifs.
-          </p>
-          <button
-            ref={buttonRef}
-            className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 hover:shadow-xl"
-          >
-            Demander une démo
-          </button>
-        </div>
+          Demander une démo
+        </button>
       </div>
     </section>
   );

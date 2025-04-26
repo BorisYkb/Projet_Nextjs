@@ -1,12 +1,13 @@
 {
     "hero": {
+      "breadcrumb": "Événement / Cérémonies et remises de prix",
       "title": "Transformez vos cérémonies et remises de prix en moments mémorables",
       "bgColor": "bg-blue-100",
-      "image": "/images/prestations/ceremonies/hero.jpg"
+      "image": "/images/ceremonies/hero.jpg"
     },
     "introduction": {
       "text": "Vous souhaitez organiser une cérémonie prestigieuse pour récompenser l'excellence, célébrer des accomplissements ou honorer des contributions remarquables ?",
-      "bgColor": "bg-blue-100"
+      "bgColor": "bg-white"
     },
     "features": {
       "title": "Sublimez votre cérémonie grâce à nos solutions digitales",
@@ -19,18 +20,18 @@
       "bgColor": "bg-blue-100"
     },
     "reasonsToChoose": {
-      "title": "2 raisons de choisir Eventmaker",
+      "title": "2 raisons de choisir EventQuorum",
       "blocks": [
         {
           "title": "Gérez vos nominations et votes en toute simplicité",
           "content": "Notre plateforme facilite la gestion des candidatures, des nominations et des votes. Créez des formulaires personnalisés, collectez les votes du public ou d'un jury et affichez les résultats en temps réel.",
-          "image": "/images/prestations/ceremonies/voting.png",
+          "image": "/images/ceremonies/voting.jpg",
           "bgColor": "bg-indigo-50"
         },
         {
           "title": "Offrez une expérience hybride exceptionnelle",
           "content": "Combinez la présence physique et virtuelle pour toucher un public plus large. Notre solution permet aux participants distants de vivre l'émotion de la cérémonie comme s'ils y étaient.",
-          "image": "/images/prestations/ceremonies/hybrid.png",
+          "image": "/images/ceremonies/hybrid.jpg",
           "bgColor": "bg-purple-50"
         }
       ]
@@ -39,22 +40,22 @@
       "title": "Pourquoi choisir notre solution de cérémonie ?",
       "items": [
         {
-          "icon": "trophy",
+          "icon": ["trophy","text-yellow-400"],
           "title": "Gestion des lauréats",
           "description": "Organisation fluide des remises de prix"
         },
         {
-          "icon": "camera",
+          "icon": ["camera","text-purple-400"],
           "title": "Production audiovisuelle",
           "description": "Captation professionnelle de moments clés"
         },
         {
-          "icon": "chart-bar",
+          "icon": ["chart-bar","text-green-400"],
           "title": "Analyse des réactions",
           "description": "Mesure de l'impact émotionnel"
         },
         {
-          "icon": "share",
+          "icon": ["share","text-blue-400"],
           "title": "Partage social",
           "description": "Amplification de votre événement"
         }
@@ -65,16 +66,19 @@
       "title": "Nos fonctionnalités",
       "items": [
         {
-          "icon": "award",
-          "title": "Remise de prix"
+          "icon": ["award","text-orange-400"],
+          "title": "Remise de prix",
+          "link": "fonctionnalite-1"
         },
         {
-          "icon": "vote",
-          "title": "Système de vote"
+          "icon": ["vote","text-pink-400"],
+          "title": "Système de vote",
+          "link": "fonctionnalite-2"
         },
         {
-          "icon": "stream",
-          "title": "Diffusion en direct"
+          "icon": ["stream","text-yellow-400"],
+          "title": "Diffusion en direct",
+          "link": "fonctionnalite-3"
         }
       ]
     }

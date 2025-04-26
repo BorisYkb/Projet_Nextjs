@@ -1,12 +1,13 @@
 {
     "hero": {
+      "breadcrumb": "Événement / Assemblées Générales",
       "title": "Rendez vos assemblées générales plus engageantes et participatives",
       "bgColor": "bg-green-100",
-      "image": "/images/prestations/assemblees/hero.jpg"
+      "image": "/images/assemblees/hero.jpg"
     },
     "introduction": {
       "text": "Vous souhaitez organiser une assemblée générale efficace, transparente et inclusive qui favorise la participation active de tous les membres ?",
-      "bgColor": "bg-green-100"
+      "bgColor": "bg-white"
     },
     "features": {
       "title": "Optimisez votre assemblée générale grâce à nos solutions digitales",
@@ -19,18 +20,18 @@
       "bgColor": "bg-green-100"
     },
     "reasonsToChoose": {
-      "title": "2 raisons de choisir Eventmaker",
+      "title": "2 raisons de choisir EventQuorum",
       "blocks": [
         {
           "title": "Simplifiez les processus de vote et de quorum",
           "content": "Notre plateforme sécurisée permet d'organiser des votes électroniques fiables et transparents. Vérifiez facilement le quorum, gérez les procurations et obtenez des résultats instantanés.",
-          "image": "/images/prestations/assemblees/voting-system.png",
+          "image": "/images/assemblees/voting-system.jpg",
           "bgColor": "bg-emerald-50"
         },
         {
           "title": "Favorisez les échanges constructifs",
           "content": "Offrez à tous les participants la possibilité de contribuer grâce à nos outils de modération de questions et de prise de parole. Garantissez des débats équilibrés et productifs.",
-          "image": "/images/prestations/assemblees/discussion.png",
+          "image": "/images/assemblees/discussion.jpg",
           "bgColor": "bg-teal-50"
         }
       ]
@@ -39,22 +40,22 @@
       "title": "Pourquoi choisir notre solution d'assemblée générale ?",
       "items": [
         {
-          "icon": "check-circle",
+          "icon": ["check-circle","text-amber-600"],
           "title": "Conformité légale",
           "description": "Respect des obligations statutaires"
         },
         {
-          "icon": "shield",
+          "icon": ["shield" ,"text-red-400"],
           "title": "Sécurité renforcée",
           "description": "Protection des données sensibles"
         },
         {
-          "icon": "users-group",
+          "icon": ["users-group" ,"text-orange-400"],
           "title": "Participation inclusive",
           "description": "Accessibilité pour tous les membres"
         },
         {
-          "icon": "document",
+          "icon": ["document" ,"text-yellow-400"],
           "title": "Documentation complète",
           "description": "Archivage et traçabilité"
         }
@@ -65,16 +66,19 @@
       "title": "Nos fonctionnalités",
       "items": [
         {
-          "icon": "vote-yesno",
-          "title": "Système de vote"
+          "icon": ["vote-yesno","text-blue-400"],
+          "title": "Système de vote",
+          "link": "fonctionnalite-1"
         },
         {
-          "icon": "document-share",
-          "title": "Partage de documents"
+          "icon": ["document-share","text-green-400"],
+          "title": "Partage de documents",
+          "link": "fonctionnalite-2"
         },
         {
-          "icon": "chat-question",
-          "title": "Questions-réponses"
+          "icon": ["chat-question","text-amber-600"],
+          "title": "Questions-réponses",
+          "link": "fonctionnalite-3"
         }
       ]
     }

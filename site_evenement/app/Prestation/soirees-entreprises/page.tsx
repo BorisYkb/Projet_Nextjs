@@ -11,9 +11,9 @@ import CallToAction from '../component/CallToAction';
 import MoreContent from '../component/MoreContent';
 
 // Import data
-import assembleesData from '../data/assemblees.json';
+import soireesData from '../data/soirees.json';
 
-export default function AssembleesGeneralesPage() {
+export default function SoireesEntreprisesPage() {
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
@@ -22,37 +22,37 @@ export default function AssembleesGeneralesPage() {
   return (
     <main className="min-h-screen">
       <Hero 
-        breadcrumb={assembleesData.hero.breadcrumb}
-        title={assembleesData.hero.title} 
-        bgColor={assembleesData.hero.bgColor} 
-        image={assembleesData.hero.image} 
+        breadcrumb={soireesData.hero.breadcrumb}
+        title={soireesData.hero.title} 
+        bgColor={soireesData.hero.bgColor} 
+        image={soireesData.hero.image} 
       />
       
       <Introduction 
-        text={assembleesData.introduction.text} 
-        bgColor={assembleesData.introduction.bgColor} 
+        text={soireesData.introduction.text} 
+        bgColor={soireesData.introduction.bgColor} 
       />
       
       <Features 
-        title={assembleesData.features.title} 
-        items={assembleesData.features.items} 
-        bgColor={assembleesData.features.bgColor} 
+        title={soireesData.features.title} 
+        items={soireesData.features.items} 
+        bgColor={soireesData.features.bgColor} 
       />
       
       <ReasonToChoose 
-        title={assembleesData.reasonsToChoose.title} 
-        blocks={assembleesData.reasonsToChoose.blocks} 
+        title={soireesData.reasonsToChoose.title} 
+        blocks={soireesData.reasonsToChoose.blocks} 
       />
       
       <WhyChoose 
-        title={assembleesData.whyChoose.title} 
-        items={assembleesData.whyChoose.items} 
-        bgColor={assembleesData.whyChoose.bgColor} 
+        title={soireesData.whyChoose.title} 
+        items={soireesData.whyChoose.items} 
+        bgColor={soireesData.whyChoose.bgColor} 
       />
       
       <FunctionalitiesSection 
-        title={assembleesData.functionalities.title} 
-        items={assembleesData.functionalities.items} 
+        title={soireesData.functionalities.title} 
+        items={soireesData.functionalities.items} 
       />
       
       {/* Fixed components */}

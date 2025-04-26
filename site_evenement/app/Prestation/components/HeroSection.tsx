@@ -50,7 +50,7 @@ export default function HeroSection({ isLoaded, data }: HeroSectionProps) {
 
   return (
     <div ref={sectionRef} className="relative bg-gradient-to-b from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-950 overflow-hidden">
-      <div className="container mx-auto px-6 py-20 md:py-24">
+      <div className="container mx-auto px-6 mt-20 py-20 md:py-24">
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="md:w-1/2 space-y-6">
             <p className="text-amber-700 dark:text-amber-300 uppercase font-semibold tracking-wider animate-item">

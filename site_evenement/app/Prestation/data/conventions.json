@@ -20,7 +20,7 @@
       "bgColor": "bg-pink-50"
     },
     "reasonsToChoose": {
-      "title": "2 raisons de choisir Eventmaker",
+      "title": "2 raisons de choisir EventQuorum",
       "blocks": [
         {
           "title": "Récoltez des informations précises sur vos participants",
@@ -67,15 +67,18 @@
       "items": [
         {
           "icon": ["presentation","text-red-400"],
-          "title": "Rendez-vous"
+          "title": "Rendez-vous",
+          "link": "fonctionnalite-1"
         },
         {
           "icon":  ["message","text-blue-400"],
-          "title": "Espaces interactifs"
+          "title": "Espaces interactifs",
+          "link": "fonctionnalite-2"
         },
         {
           "icon": ["network","text-yellow-400"],
-          "title": "Networking"
+          "title": "Networking",
+          "link": "fonctionnalite-3"
         }
       ]
     }

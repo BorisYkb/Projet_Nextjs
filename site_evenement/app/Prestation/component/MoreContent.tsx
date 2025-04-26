@@ -98,12 +98,12 @@ export default function MoreContent() {
   return (
     <section 
       ref={sectionRef}
-      className="w-full bg-gray-900 dark:bg-black py-16 px-4 md:px-8 lg:px-16"
+      className="w-full bg-white dark:bg-black py-16 px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-6xl mx-auto">
         <h2 
           ref={titleRef}
-          className="text-2xl md:text-3xl font-bold text-white mb-12 text-center"
+          className="text-2xl md:text-3xl font-bold dark:text-white text-gray-900 mb-12 text-center"
         >
           Pour aller plus loin
         </h2>
@@ -113,7 +113,7 @@ export default function MoreContent() {
             <div 
               key={index}
               ref={el => cardsRef.current[index] = el}
-              className="bg-gray-800 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             >
               <div className="relative h-48">
                 <Image 
@@ -124,11 +124,11 @@ export default function MoreContent() {
                 />
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-semibold text-white mb-3">
+                <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">
                   {content.title}
                 </h3>
                 <div className="flex justify-end">
-                  <span className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center text-sm">
+                  <span className="text-blue-600 hover:text-blue-400 transition-colors duration-300 flex items-center text-sm">
                     En savoir plus
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -143,7 +143,7 @@ export default function MoreContent() {
         <div className="text-center">
           <button
             ref={buttonRef}
-            className="bg-transparent hover:bg-blue-600 text-blue-400 hover:text-white font-medium py-2 px-6 border border-blue-400 hover:border-transparent rounded-full transition-colors duration-300"
+            className="bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white font-medium py-2 px-6 border border-blue-400 hover:border-transparent rounded-full transition-colors duration-300"
           >
             Voir plus de fonctionnalités
           </button>
