@@ -109,7 +109,7 @@ const EventCarousel = () => {
 
   return (
     <div className="w-full py-8 px-4 my-10 bg-gray-50 rounded-lg">
-      <h2 ref={titleref} className="text-3xl font-bold text-center mb-6">Nos Événements Réussis</h2>
+      <h2 ref={titleref} className="text-3xl dark:text-gray-900 font-bold text-center mb-6">Nos Événements <span className='bg-gradient-to-r from-green-600 via-yellow-600 to-yellow-500 text-transparent bg-clip-text'> Réussis</span></h2>
       <p ref={introref} className="text-lg md:text-xl text-gray-600 max-w-3xl mb-8 mx-auto">
         Découvrez les événements marquants que nous avons organisés avec succès
       </p>

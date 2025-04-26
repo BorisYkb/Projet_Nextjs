@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import EventsSection from "./components/EventsSection";
 import PartenersSection from "./components/PartenersSection";
 import Fonctionnalite from "./components/Fonctionnalite"
+import FeaturedCategories from './components/FeaturedCategories'; // ajuste le chemin selon ton projet
 import Invitation from "./components/Invitation"
 
 import Image from "next/image";
@@ -37,24 +38,24 @@ export default function Home() {
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8 }
       )
-      .fromTo(
-        heading2Ref.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
-        "-=0.4"
-      )
-      .fromTo(
-        sectionRef.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
-        "-=0.4"
-      )
-      .fromTo(
-        buttonref.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
-        "-=0.4"
-      );
+        .fromTo(
+          heading2Ref.current,
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          "-=0.4"
+        )
+        .fromTo(
+          sectionRef.current,
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          "-=0.4"
+        )
+        .fromTo(
+          buttonref.current,
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          "-=0.4"
+        );
     }
   }, []);
 
@@ -62,11 +63,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Hero />
       <Fonctionnalite />
+      {/* Tes autres sections */}
+      <FeaturedCategories />
       <EventsSection />
       <PartenersSection />
       <EventCarousel />
       <Invitation />
-    </main>   
+    </main>
 
   );
 }

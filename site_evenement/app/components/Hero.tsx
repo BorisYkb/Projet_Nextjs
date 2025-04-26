@@ -30,7 +30,7 @@ export default function Hero() {
               EventQuorum
             </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-300 leading-tight mb-4">
               Découvrez une <span className="text-blue-600">nouvelle façon</span> de créer
             </h1>
 
