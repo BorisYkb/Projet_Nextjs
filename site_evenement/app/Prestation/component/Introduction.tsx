@@ -42,7 +42,7 @@ export default function Introduction({ text, bgColor }: IntroductionProps) {
       <div className="max-w-6xl mx-auto">
         <p 
           ref={introRef}
-          className="text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-white font-medium text-center max-w-4xl mx-auto"
+          className="text-xl md:text-2xl lg:text-3xl text-gray-800 dark:text-white font-bold text-justify max-w-4xl mx-auto"
         >
           {text}
         </p>
