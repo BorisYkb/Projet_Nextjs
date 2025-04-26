@@ -63,7 +63,7 @@ export default function Functionalities({ isLoaded, data }: FunctionalitiesProps
           Découvrez nos fonctionnalités pour vos conférences ou colloques
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div id='fonctionnalite' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.items.map((functionalitie) => (
             <a href={functionalitie.link} key={functionalitie.id} className="functionality-item dark:hover:bg-gray-700 hover:bg-gray-200 p-4 transform transition-all flex flex-col items-center text-center">
               <div className="bg-gray-100 p-4 rounded-full mb-4">

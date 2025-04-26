@@ -1,11 +1,11 @@
 {
   "hero": {
     "breadcrumb": "Événement / Conférences",
-    "title": "Faites de vos conférences des moments de partage inspirants pour vos participants",
+    "title": "Des conférences mémorables qui inspirent et rassemblent.",
     "image": "/images/conference-hero.jpg",
     "description": {
-      "main": "Vous souhaitez organiser une conférence pour éduquer vos participants sur un sujet spécifique, pour promouvoir une cause, ou pour faciliter le réseautage entre professionnels ?",
-      "secondary": "Expérimentez notre accompagnement dans l'ensemble de vos objectifs grâce à une plateforme tout-en-un et complète d'experts des professionnels de l'événementiel."
+      "main": "Conférence, networking ou cause à défendre ? Nous vous accompagnons dans la création d'événements uniques et engageants.",
+      "secondary": "Notre plateforme tout-en-un et nos experts événementiels vous accompagnent pour réussir chaque objectif."
     },
     "benefits": [
       "Profitez de modules très performants",

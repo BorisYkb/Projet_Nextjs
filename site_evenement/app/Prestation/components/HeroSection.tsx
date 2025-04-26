@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 
+
 interface HeroData {
   breadcrumb: string;
   title: string;
@@ -50,7 +51,7 @@ export default function HeroSection({ isLoaded, data }: HeroSectionProps) {
 
   return (
     <div ref={sectionRef} className="relative bg-gradient-to-b from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-950 overflow-hidden">
-      <div className="container mx-auto px-6 mt-20 py-20 md:py-24">
+      <div className="container mx-auto px-6 mt-10 py-20 md:py-24">
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="md:w-1/2 space-y-6">
             <p className="text-amber-700 dark:text-amber-300 uppercase font-semibold tracking-wider animate-item">
@@ -92,8 +93,9 @@ export default function HeroSection({ isLoaded, data }: HeroSectionProps) {
               </ul>
               
               <div className="pt-4">
-                <button className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md shadow-md transition-colors duration-300">
+                <button type="button" className="px-6 py-3 cursor-pointer bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md shadow-md transition-colors duration-300">
                   {data.buttonText}
+                  <link rel="stylesheet" href="#fonctionnalite" />
                 </button>
               </div>
             </div>
