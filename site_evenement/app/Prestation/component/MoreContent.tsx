@@ -5,7 +5,13 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function MoreContent() {
+type MoreContentProps = {
+  title: string;
+  buttonLabel: string;
+  items: { title: string; image: string }[];
+};
+
+export default function MoreContent({ title, buttonLabel, items }: MoreContentProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -13,115 +19,49 @@ export default function MoreContent() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
-    // Animation for the title
+
     if (titleRef.current) {
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none'
-          }
-        }
-      );
+      gsap.fromTo(titleRef.current, { opacity: 0, y: 20 }, {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: titleRef.current, start: 'top 85%' }
+      });
     }
-    
-    // Animation for each card
+
     cardsRef.current.forEach((card, index) => {
       if (card) {
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            delay: 0.15 * index,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 90%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
+        gsap.fromTo(card, { opacity: 0, y: 30 }, {
+          opacity: 1, y: 0, duration: 0.6, delay: 0.15 * index, ease: 'power2.out',
+          scrollTrigger: { trigger: card, start: 'top 90%' }
+        });
       }
     });
-    
-    // Animation for the button
+
     if (buttonRef.current) {
-      gsap.fromTo(
-        buttonRef.current,
-        { opacity: 0, y: 10 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          delay: 0.3,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: buttonRef.current,
-            start: 'top 95%',
-            toggleActions: 'play none none none'
-          }
-        }
-      );
+      gsap.fromTo(buttonRef.current, { opacity: 0, y: 10 }, {
+        opacity: 1, y: 0, duration: 0.6, delay: 0.3, ease: 'power2.out',
+        scrollTrigger: { trigger: buttonRef.current, start: 'top 95%' }
+      });
     }
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
+    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   }, []);
 
-  const moreContent = [
-    {
-      title: "Découvrez comment d'autres participants ont vécu notre plateforme",
-      image: "/images/shared/testimonials.jpg"
-    },
-    {
-      title: "Explorez nos options de personnalisation pour votre conférence",
-      image: "/images/shared/customization.jpg"
-    },
-    {
-      title: "Consultez notre guide d'organisation d'événements réussis",
-      image: "/images/shared/guide.jpg"
-    }
-  ];
-
   return (
-    <section 
-      ref={sectionRef}
-      className="w-full bg-white dark:bg-black py-16 px-4 md:px-8 lg:px-16"
-    >
+    <section ref={sectionRef} className="w-full bg-white dark:bg-black py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto">
-        <h2 
-          ref={titleRef}
-          className="text-2xl md:text-3xl font-bold dark:text-white text-gray-900 mb-12 text-center"
-        >
-          Pour aller plus loin
+        <h2 ref={titleRef} className="text-2xl md:text-3xl font-bold dark:text-white text-gray-900 mb-12 text-center">
+          {title}
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {moreContent.map((content, index) => (
-            <div 
+          {items.map((content, index) => (
+            <div
               key={index}
               ref={el => cardsRef.current[index] = el}
               className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             >
               <div className="relative h-48">
-                <Image 
-                  src={content.image} 
-                  alt={content.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
+                <Image src={content.image} alt={content.title} fill style={{ objectFit: 'cover' }} />
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">
@@ -139,13 +79,13 @@ export default function MoreContent() {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center">
           <button
             ref={buttonRef}
             className="bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white font-medium py-2 px-6 border border-blue-400 hover:border-transparent rounded-full transition-colors duration-300"
           >
-            Voir plus de fonctionnalités
+            {buttonLabel}
           </button>
         </div>
       </div>

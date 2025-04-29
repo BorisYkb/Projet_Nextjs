@@ -21,43 +21,48 @@ export default function SoireesEntreprisesPage() {
 
   return (
     <main className="min-h-screen">
-      <Hero 
+      <Hero
         breadcrumb={soireesData.hero.breadcrumb}
-        title={soireesData.hero.title} 
-        bgColor={soireesData.hero.bgColor} 
-        image={soireesData.hero.image} 
+        title={soireesData.hero.title}
+        bgColor={soireesData.hero.bgColor}
+        image={soireesData.hero.image}
       />
-      
-      <Introduction 
-        text={soireesData.introduction.text} 
-        bgColor={soireesData.introduction.bgColor} 
+
+      <Introduction
+        text={soireesData.introduction.text}
+        bgColor={soireesData.introduction.bgColor}
       />
-      
-      <Features 
-        title={soireesData.features.title} 
-        items={soireesData.features.items} 
-        bgColor={soireesData.features.bgColor} 
+
+      <Features
+        title={soireesData.features.title}
+        items={soireesData.features.items}
+        bgColor={soireesData.features.bgColor}
       />
-      
-      <ReasonToChoose 
-        title={soireesData.reasonsToChoose.title} 
-        blocks={soireesData.reasonsToChoose.blocks} 
+
+      <ReasonToChoose
+        title={soireesData.reasonsToChoose.title}
+        blocks={soireesData.reasonsToChoose.blocks}
       />
-      
-      <WhyChoose 
-        title={soireesData.whyChoose.title} 
-        items={soireesData.whyChoose.items} 
-        bgColor={soireesData.whyChoose.bgColor} 
+
+      <WhyChoose
+        title={soireesData.whyChoose.title}
+        items={soireesData.whyChoose.items}
+        bgColor={soireesData.whyChoose.bgColor}
       />
-      
-      <FunctionalitiesSection 
-        title={soireesData.functionalities.title} 
-        items={soireesData.functionalities.items} 
+
+      <FunctionalitiesSection
+        title={soireesData.functionalities.title}
+        items={soireesData.functionalities.items}
       />
-      
+
       {/* Fixed components */}
       <CallToAction />
-      <MoreContent />
+      <MoreContent
+        title={soireesData.moreContent.title}
+        buttonLabel={soireesData.moreContent.buttonLabel}
+        items={soireesData.moreContent.items}
+      />
+
     </main>
   );
 }

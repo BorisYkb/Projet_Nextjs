@@ -21,43 +21,48 @@ export default function AssembleesGeneralesPage() {
 
   return (
     <main className="min-h-screen">
-      <Hero 
+      <Hero
         breadcrumb={assembleesData.hero.breadcrumb}
-        title={assembleesData.hero.title} 
-        bgColor={assembleesData.hero.bgColor} 
-        image={assembleesData.hero.image} 
+        title={assembleesData.hero.title}
+        bgColor={assembleesData.hero.bgColor}
+        image={assembleesData.hero.image}
       />
-      
-      <Introduction 
-        text={assembleesData.introduction.text} 
-        bgColor={assembleesData.introduction.bgColor} 
+
+      <Introduction
+        text={assembleesData.introduction.text}
+        bgColor={assembleesData.introduction.bgColor}
       />
-      
-      <Features 
-        title={assembleesData.features.title} 
-        items={assembleesData.features.items} 
-        bgColor={assembleesData.features.bgColor} 
+
+      <Features
+        title={assembleesData.features.title}
+        items={assembleesData.features.items}
+        bgColor={assembleesData.features.bgColor}
       />
-      
-      <ReasonToChoose 
-        title={assembleesData.reasonsToChoose.title} 
-        blocks={assembleesData.reasonsToChoose.blocks} 
+
+      <ReasonToChoose
+        title={assembleesData.reasonsToChoose.title}
+        blocks={assembleesData.reasonsToChoose.blocks}
       />
-      
-      <WhyChoose 
-        title={assembleesData.whyChoose.title} 
-        items={assembleesData.whyChoose.items} 
-        bgColor={assembleesData.whyChoose.bgColor} 
+
+      <WhyChoose
+        title={assembleesData.whyChoose.title}
+        items={assembleesData.whyChoose.items}
+        bgColor={assembleesData.whyChoose.bgColor}
       />
-      
-      <FunctionalitiesSection 
-        title={assembleesData.functionalities.title} 
-        items={assembleesData.functionalities.items} 
+
+      <FunctionalitiesSection
+        title={assembleesData.functionalities.title}
+        items={assembleesData.functionalities.items}
       />
-      
+
       {/* Fixed components */}
       <CallToAction />
-      <MoreContent />
+      <MoreContent
+        title={assembleesData.moreContent.title}
+        buttonLabel={assembleesData.moreContent.buttonLabel}
+        items={assembleesData.moreContent.items}
+      />
+
     </main>
   );
 }

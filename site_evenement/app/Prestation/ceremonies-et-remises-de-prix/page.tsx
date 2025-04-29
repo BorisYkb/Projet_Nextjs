@@ -21,43 +21,48 @@ export default function CeremoniesPage() {
 
   return (
     <main className="min-h-screen">
-      <Hero 
+      <Hero
         breadcrumb={ceremoniesData.hero.breadcrumb}
-        title={ceremoniesData.hero.title} 
-        bgColor={ceremoniesData.hero.bgColor} 
-        image={ceremoniesData.hero.image} 
+        title={ceremoniesData.hero.title}
+        bgColor={ceremoniesData.hero.bgColor}
+        image={ceremoniesData.hero.image}
       />
-      
-      <Introduction 
-        text={ceremoniesData.introduction.text} 
-        bgColor={ceremoniesData.introduction.bgColor} 
+
+      <Introduction
+        text={ceremoniesData.introduction.text}
+        bgColor={ceremoniesData.introduction.bgColor}
       />
-      
-      <Features 
-        title={ceremoniesData.features.title} 
-        items={ceremoniesData.features.items} 
-        bgColor={ceremoniesData.features.bgColor} 
+
+      <Features
+        title={ceremoniesData.features.title}
+        items={ceremoniesData.features.items}
+        bgColor={ceremoniesData.features.bgColor}
       />
-      
-      <ReasonToChoose 
-        title={ceremoniesData.reasonsToChoose.title} 
-        blocks={ceremoniesData.reasonsToChoose.blocks} 
+
+      <ReasonToChoose
+        title={ceremoniesData.reasonsToChoose.title}
+        blocks={ceremoniesData.reasonsToChoose.blocks}
       />
-      
-      <WhyChoose 
-        title={ceremoniesData.whyChoose.title} 
-        items={ceremoniesData.whyChoose.items} 
-        bgColor={ceremoniesData.whyChoose.bgColor} 
+
+      <WhyChoose
+        title={ceremoniesData.whyChoose.title}
+        items={ceremoniesData.whyChoose.items}
+        bgColor={ceremoniesData.whyChoose.bgColor}
       />
-      
-      <FunctionalitiesSection 
-        title={ceremoniesData.functionalities.title} 
-        items={ceremoniesData.functionalities.items} 
+
+      <FunctionalitiesSection
+        title={ceremoniesData.functionalities.title}
+        items={ceremoniesData.functionalities.items}
       />
-      
+
       {/* Fixed components */}
       <CallToAction />
-      <MoreContent />
+      <MoreContent
+        title={ceremoniesData.moreContent.title}
+        buttonLabel={ceremoniesData.moreContent.buttonLabel}
+        items={ceremoniesData.moreContent.items}
+      />
+
     </main>
   );
 }

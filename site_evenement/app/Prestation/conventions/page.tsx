@@ -21,43 +21,47 @@ export default function ConventionsPage() {
 
   return (
     <main className="min-h-screen">
-      <Hero 
+      <Hero
         breadcrumb={conventionsData.hero.breadcrumb}
-        title={conventionsData.hero.title} 
-        bgColor={conventionsData.hero.bgColor} 
-        image={conventionsData.hero.image} 
+        title={conventionsData.hero.title}
+        bgColor={conventionsData.hero.bgColor}
+        image={conventionsData.hero.image}
       />
-      
-      <Introduction 
-        text={conventionsData.introduction.text} 
-        bgColor={conventionsData.introduction.bgColor} 
+
+      <Introduction
+        text={conventionsData.introduction.text}
+        bgColor={conventionsData.introduction.bgColor}
       />
-      
-      <Features 
-        title={conventionsData.features.title} 
-        items={conventionsData.features.items} 
-        bgColor={conventionsData.features.bgColor} 
+
+      <Features
+        title={conventionsData.features.title}
+        items={conventionsData.features.items}
+        bgColor={conventionsData.features.bgColor}
       />
-      
-      <ReasonToChoose 
-        title={conventionsData.reasonsToChoose.title} 
-        blocks={conventionsData.reasonsToChoose.blocks} 
+
+      <ReasonToChoose
+        title={conventionsData.reasonsToChoose.title}
+        blocks={conventionsData.reasonsToChoose.blocks}
       />
-      
-      <WhyChoose 
-        title={conventionsData.whyChoose.title} 
-        items={conventionsData.whyChoose.items} 
-        bgColor={conventionsData.whyChoose.bgColor} 
+
+      <WhyChoose
+        title={conventionsData.whyChoose.title}
+        items={conventionsData.whyChoose.items}
+        bgColor={conventionsData.whyChoose.bgColor}
       />
-      
-      <FunctionalitiesSection 
-        title={conventionsData.functionalities.title} 
-        items={conventionsData.functionalities.items} 
+
+      <FunctionalitiesSection
+        title={conventionsData.functionalities.title}
+        items={conventionsData.functionalities.items}
       />
-      
+
       {/* Fixed components */}
       <CallToAction />
-      <MoreContent />
+      <MoreContent
+        title={conventionsData.moreContent.title}
+        buttonLabel={conventionsData.moreContent.buttonLabel}
+        items={conventionsData.moreContent.items}
+      />
     </main>
   );
 }

@@ -43,7 +43,7 @@ export default function ConferencePage() {
       </section>
 
       {/* Related Content - composant fixe */}
-      <MoreContent isLoaded={isLoaded} />
+      <MoreContent isLoaded={isLoaded} data={conferencesData.moreContent} />
     </main>
   );
 }

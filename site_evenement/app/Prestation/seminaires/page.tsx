@@ -43,7 +43,7 @@ export default function SeminairesPage() {
       </section>
 
       {/* Related Content - composant fixe */}
-      <MoreContent isLoaded={isLoaded} />
+      <MoreContent isLoaded={isLoaded} data={seminairesData.moreContent}/>
     </main>
   );
 }
