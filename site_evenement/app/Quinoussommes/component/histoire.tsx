@@ -5,120 +5,132 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 interface HistoireProps {
-    isLoaded: boolean;
+  isLoaded: boolean;
 }
 
 export default function Histoire({ isLoaded }: HistoireProps) {
-    const historyRef = useRef(null);
-    const titreRef = useRef(null);
-    const anneeRef = useRef(null);
-    const ligneRef = useRef(null);
+  const historyRef = useRef(null);
+  const titreRef = useRef(null);
+  const ligneRef = useRef(null);
 
-    useEffect(() => {
-        if (isLoaded && typeof window !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
 
-            // Animation d'entrée globale
-            gsap.from(historyRef.current, {
-                opacity: 0,
-                y: 30,
-                stagger: 0.2,
-                duration: 0.8,
-                ease: 'power2.out',
-            });
+      gsap.from(historyRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power3.out',
+      });
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: historyRef.current,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none',
-                },
-            });
-
-            tl.fromTo(
-                titreRef.current,
-                { x: -60, opacity: 0 },
-                { x: 0, opacity: 1, duration: 0.8 }
-            )
-                .fromTo(
-                    anneeRef.current,
-                    { x: 60, opacity: 0 },
-                    { x: 0, opacity: 1, duration: 0.8 },
-                    '-=0.4'
-                )
-                .fromTo(
-                    ligneRef.current,
-                    { y: 60, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 0.8 },
-                    '-=0.4'
-                );
+      gsap.fromTo(
+        titreRef.current,
+        { opacity: 0, y: -40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: titreRef.current,
+            start: 'top 80%',
+          },
         }
-    }, [isLoaded]);
+      );
 
-    return (
-        <div>
-            {/* Notre Histoire */}
-            <section ref={historyRef}>
-                <div ref={titreRef} className="animate-item text-center mb-10">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Notre histoire</h2>
-                    <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
+      gsap.fromTo(
+        ligneRef.current,
+        { scaleY: 0, opacity: 0 },
+        {
+          scaleY: 1,
+          opacity: 1,
+          transformOrigin: 'top',
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: ligneRef.current,
+            start: 'top 85%',
+          },
+        }
+      );
+    }
+  }, [isLoaded]);
+
+  const events = [
+    {
+      date: '2018',
+      description:
+        "Fondation de l'entreprise avec une équipe de passionnés du web.",
+    },
+    {
+      date: '2020',
+      description: "Expansion de l'équipe et ouverture de nouveaux bureaux.",
+    },
+    {
+      date: '2022',
+      description:
+        "Lancement de notre service mobile et récompense pour l'innovation.",
+    },
+    {
+      date: "Aujourd'hui",
+      description:
+        "Une équipe de professionnels au service de toute la Côte d'Ivoire.",
+    },
+  ];
+
+  return (
+    <section ref={historyRef} className="py-16 px-4 sm:px-8 md:px-16 lg:px-24 bg-white">
+      <div ref={titreRef} className="text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+          Notre histoire
+        </h2>
+        <p className="text-gray-500 max-w-xl mx-auto">
+          Un parcours marqué par l’innovation, la passion et la croissance.
+        </p>
+        <div className="w-24 h-1 bg-indigo-600 mx-auto mt-4"></div>
+      </div>
+
+      <div className="relative">
+        {/* Ligne verticale */}
+        <div
+          ref={ligneRef}
+          className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-indigo-200 transform -translate-x-1/2"
+        ></div>
+
+        <div className="space-y-16">
+          {events.map((event, index) => (
+            <div
+              key={index}
+              className={`flex flex-col md:flex-row items-center ${
+                index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Texte */}
+              <div className="md:w-1/2 p-6">
+                <div
+                  className={`${
+                    index % 2 !== 0 ? 'md:text-left' : 'md:text-right'
+                  } text-center md:text-inherit`}
+                >
+                  <h3 className="text-2xl font-semibold text-indigo-700 mb-2">
+                    {event.date}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {event.description}
+                  </p>
                 </div>
-                <div ref={anneeRef} className="relative animate-item">
-                    {/* Ligne de temps verticale */}
-                    <div
-                        ref={ligneRef}
-                        className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-indigo-200 transform -translate-x-1/2"
-                    ></div>
+              </div>
 
-                    {/* Événements */}
-                    <div className="space-y-12">
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">2018</h3>
-                                <p className="text-gray-600">
-                                    Fondation de l'entreprise avec une équipe de quelques passionnés du web.
-                                </p>
-                            </div>
-                            <div className="hidden md:block w-4 h-4 bg-indigo-600 rounded-full border-4 border-indigo-100 z-10"></div>
-                            <div className="md:w-1/2 md:pl-12"></div>
-                        </div>
+              {/* Point central */}
+              <div className="hidden md:flex justify-center items-center w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-md z-10"></div>
 
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-none"></div>
-                            <div className="hidden md:block w-4 h-4 bg-indigo-600 rounded-full border-4 border-indigo-100 z-10"></div>
-                            <div className="md:w-1/2 md:pl-12 mb-4 md:mb-0">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">2020</h3>
-                                <p className="text-gray-600">
-                                    Expansion de l'équipe et ouverture de nos nouveaux bureaux.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">2022</h3>
-                                <p className="text-gray-600">
-                                    Lancement de notre service d'application mobile et récompense pour l'innovation.
-                                </p>
-                            </div>
-                            <div className="hidden md:block w-4 h-4 bg-indigo-600 rounded-full border-4 border-indigo-100 z-10"></div>
-                            <div className="md:w-1/2 md:pl-12"></div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-none"></div>
-                            <div className="hidden md:block w-4 h-4 bg-indigo-600 rounded-full border-4 border-indigo-100 z-10"></div>
-                            <div className="md:w-1/2 md:pl-12 mb-4 md:mb-0">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">Aujourd'hui</h3>
-                                <p className="text-gray-600">
-                                    Une équipe de professionnels dévoués, servant des clients dans toute la Côte
-                                    d'Ivoire.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              {/* Espacement symétrique */}
+              <div className="md:w-1/2 p-6 hidden md:block"></div>
+            </div>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 }

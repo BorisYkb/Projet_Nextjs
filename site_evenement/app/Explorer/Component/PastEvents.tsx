@@ -54,13 +54,13 @@ export default function PastEvents() {
   ];
 
   return (
-    <div className='mt-25'>
-      <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-        Nous y 
-        <span className="bg-gradient-to-r from-green-600 via-yellow-500 to-yellow-400 text-transparent bg-clip-text ml-4">
-          étions
-        </span>
-      </h2>
+    <div className=' mt-15 lg:mt-25'>
+        <h2 className="uppercase text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-10">
+          Nous y{" "}
+          <span className="bg-gradient-to-r from-green-600 via-yellow-500 to-yellow-400 text-transparent bg-clip-text ml-2">
+            étions
+          </span>
+        </h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {pastEvents.map((event) => (
