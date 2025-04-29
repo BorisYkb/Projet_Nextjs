@@ -30,7 +30,7 @@ export default function UpcomingEvents() {
         {upcomingEvents.map((event) => (
           <div
             key={event.id}
-            className="dark:bg-gray-900 p-4 sm:p-5 lg:p-6 rounded-md shadow-sm space-y-2 sm:space-y-3 transition hover:shadow-lg"
+            className="bg-green-100 dark:bg-gray-900 p-4 sm:p-5 lg:p-6 rounded-md shadow-sm space-y-2 sm:space-y-3 transition hover:shadow-lg"
           >
             <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white">
               {event.title}
