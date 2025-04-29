@@ -60,7 +60,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 py-20 sm:px-5">
       <Hero />
       <Fonctionnalite />
       {/* Tes autres sections */}

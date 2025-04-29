@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { UserIcon, Code2Icon, QrCodeIcon, VideoIcon, UsersIcon, BarChart3Icon } from 'lucide-react'
+import { UserIcon, CreditCardIcon, QrCodeIcon, VideoIcon, UsersIcon, BarChart3Icon } from 'lucide-react'
 
 export default function Fonctionnalite() {
   const headingRef = useRef(null)
@@ -59,13 +59,13 @@ export default function Fonctionnalite() {
       ],
     },
     {
-      icon: <Code2Icon className="w-10 h-10 text-yellow-400" />,
-      title: 'Site web & Appli mobile',
+      icon: <CreditCardIcon className="w-10 h-10 text-yellow-400" />,
+      title: 'Paiement électronique sécurisé',
       items: [
-        'Site web personnalisé avec URL dédiée',
-        'Appli mobile en marque blanche',
-        "E-mails d'invitation",
-        'Programmation de campagnes',
+        'Intégration de solutions de paiement (Orange Money, Wave, etc.)',
+        'Gestion des remboursements automatisée',
+        'Suivi en temps réel des paiements',
+        'Compatibilité automatique des paiements',
       ],
     },
     {
@@ -110,25 +110,25 @@ export default function Fonctionnalite() {
   ]
 
   return (
-    <div className="py-16 px-4 max-w-7xl mx-auto">
-      <h1 ref={headingRef} className="text-4xl font-bold text-center mb-6">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-0">
+      <h1 ref={headingRef} className="text-3xl sm:text-4xl font-bold text-center mb-6">
         Les fonctionnalités personnalisables <br />
         <span className="text-pink-400">préférées</span> de nos clients
       </h1>
 
-      <p ref={heading2Ref} className="text-center text-lg mb-12 max-w-2xl mx-auto">
+      <p ref={heading2Ref} className="text-center text-base sm:text-lg mb-12 max-w-2xl mx-auto">
         Découvrez nos modules les plus populaires, pensés pour offrir une expérience fluide et complète lors de vos événements.
       </p>
 
       <div
         ref={sectionRef}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-25"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
       >
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col gap-3">
+          <div key={index} className="flex flex-col gap-2 max-w-sm w-full">
             <div>{feature.icon}</div>
             <h3 className="font-bold text-lg">{feature.title}</h3>
-            <ul className="text-sm leading-relaxed">
+            <ul className="text-sm leading-relaxed ">
               {feature.items.map((item, i) => (
                 <li key={i}>
                   <span className={i === 0 ? 'font-semibold' : ''}>{item}</span>

@@ -31,11 +31,11 @@ export default function Hero() {
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-300 leading-tight mb-4">
-              Découvrez une <span className="text-blue-600">nouvelle façon</span> de créer
+              Créer des <span className="text-blue-600">moments</span> extraordinaires
             </h1>
 
             <p className="text-lg text-gray-600 mb-6">
-              Notre plateforme vous offre tous les outils nécessaires pour transformer vos idées en projets concrets et innovants. Commencez dès aujourd'hui.
+            Nous transformons vos idées en événements exceptionnels qui dépassent toutes les attentes. Commencez dès aujourd'hui.
             </p>
 
             {/* Boutons */}
@@ -43,18 +43,11 @@ export default function Hero() {
               <Link
                 href="/decouvrir"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl">
-                Découvrir
+                Créer un événement
               </Link>
 
-              {/* Bouton Watch Video */}
-              <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition">
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shadow-md">
-                  <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <span className="text-base font-medium">Watch video</span>
-              </button>
+              
+              
             </div>
 
             {/* Statistiques */}
