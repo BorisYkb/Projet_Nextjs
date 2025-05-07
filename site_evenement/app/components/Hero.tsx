@@ -41,7 +41,7 @@ export default function Hero() {
             {/* Boutons */}
             <div className="flex flex-wrap gap-4 mb-8">
               <Link
-                href="/decouvrir"
+                href="/DemoRequest"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl">
                 Créer un événement
               </Link>

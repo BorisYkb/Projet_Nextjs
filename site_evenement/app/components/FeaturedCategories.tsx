@@ -41,7 +41,7 @@ export default function FeaturedCategories() {
     return (
         <section
             ref={sectionRef}
-            className="max-w-7xl mx-4 sm:mx-2 sm:px-3 my-14 px-6 py-12 bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-xl"
+            className="max-w-7xl mx-4 sm:mx-2 sm:px-10 my-14 px-6 py-12 bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-xl"
         >
             <div className="md:flex-row md:justify-between md:items-center mb-12">
                 <div>
@@ -60,7 +60,7 @@ export default function FeaturedCategories() {
                 {categories.map((category, index) => (
                     <div
                         key={index}
-                        className="flex items-start gap-4 p-6 bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 cursor-pointer hover:scale-[1.02]"
+                        className="flex items-start gap-4 p-6 bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 hover:scale-[1.02]"
                     >
                         <div className="text-indigo-600 dark:text-indigo-400">
                             {category.icon}

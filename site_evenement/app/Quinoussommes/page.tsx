@@ -37,9 +37,9 @@ export default function QuiNousSommes() {
           <p className="text-lg text-indigo-100 mb-8">
             Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
           </p>
-          <button className="bg-white text-indigo-900 cursor-pointer font-bold py-3 px-8 rounded-full hover:bg-indigo-100 transition-colors duration-300">
+          <a href='\DemoRequest' className="bg-white text-indigo-900 cursor-pointer font-bold py-3 px-8 rounded-full hover:bg-indigo-100 transition-colors duration-300">
             Nous contacter
-          </button>
+          </a>
         </div>
       </div>
     </div>

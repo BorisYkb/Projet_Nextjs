@@ -93,12 +93,13 @@ export default function CallToAction() {
           Nos experts sont à votre disposition pour créer un événement sur mesure qui répondra à tous vos objectifs.
         </p>
 
-        <button
+        <a
           ref={buttonRef}
+          href='\DemoRequest'
           className="mt-6 bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg"
         >
           Demander une démo
-        </button>
+        </a>
       </div>
     </section>
   );

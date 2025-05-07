@@ -163,9 +163,9 @@ export default function Navbar() {
                 <div className="w-[40%] flex items-center justify-center p-6 border-l border-gray-200">
                   <div className="w-[60%] h-[200px] bg-gray-100 rounded-md overflow-hidden flex items-center justify-center">
                     <img
-                      src="/presentation-menu.avif"
+                      src="/presentation-menu1.avif"
                       alt="Illustration"
-                      className="object-contain w-full h-full"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default function Navbar() {
 
           {/* Bouton CTA */}
           <div className="hidden md:flex">
-            <Link ref={linkref} href="/inscription" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link ref={linkref} href="/DemoRequest" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
               Demander une démo
             </Link>
           </div>

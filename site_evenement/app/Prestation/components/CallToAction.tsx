@@ -58,7 +58,7 @@ export default function CallToAction({ isLoaded }: CallToActionProps) {
           </div>
 
           <div className="flex-shrink-0">
-            <Link href="/contact">
+            <Link href="/DemoRequest">
               <span className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-amber-500 hover:from-purple-700 hover:to-amber-600 dark:from-purple-700 dark:to-amber-600 dark:hover:from-purple-800 dark:hover:to-amber-700 text-white font-medium rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <span className="mr-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
