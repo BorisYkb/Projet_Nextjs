@@ -39,9 +39,9 @@ export default function Features({ features }: FeaturesProps) {
     }, [])
 
     return (
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-12">
                     Fonctionnalités clés
                 </h2>
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -49,13 +49,13 @@ export default function Features({ features }: FeaturesProps) {
                         <div
                             key={index}
                             ref={el => (cardsRef.current[index] = el)}
-                            className="p-6 rounded-2xl shadow-md bg-gray-50 border border-gray-100 hover:shadow-lg transition duration-300"
+                            className="p-6 rounded-2xl shadow-md bg-gray-50 border border-gray-100 dark:bg-gray-700 dark:border-gray-800 hover:shadow-lg transition duration-300"
                         >
                             <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 text-white bg-indigo-600 rounded-full">
                                 <CheckCircle className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                            <p className="text-gray-600 text-sm">{feature.description}</p>
+                            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{feature.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
                         </div>
                     ))}
                 </div>

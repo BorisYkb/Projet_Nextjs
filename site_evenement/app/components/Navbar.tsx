@@ -243,7 +243,7 @@ export default function Navbar() {
           <Link href="/Quinoussommes/" className="block text-gray-900 dark:text-white hover:bg-gray-100  dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
             Qui sommes-nous ?
           </Link>
-          <Link href="/demander_demo" className="block bg-blue-600 text-white dark:text-white dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+          <Link href="/DemoRequest" className="block bg-blue-600 text-white dark:text-white dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
             Demander une démo
           </Link>
         </div>
