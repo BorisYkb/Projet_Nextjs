@@ -1,18 +1,12 @@
-// components/PartnersSection.jsx
 "use client";
 
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function PartnersSection() {
   const sectionRef = useRef(null);
-  const headingRef = useRef(null);
-  const partnersRef = useRef(null);
-  const frogRef = useRef(null);
-  const ctaRef = useRef(null);
-  const introRef = useRef(null);
+  const scrollRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const partners = [
     { id: 1, name: "Orange CI", logo: "/logoOrange.png" },
@@ -22,110 +16,129 @@ export default function PartnersSection() {
     { id: 5, name: "Société Générale", logo: "/logoSocieteGenerale.png" },
     { id: 6, name: "NSIA Bank", logo: "/Logo-NSIA-BANK.png" },
     { id: 7, name: "Unilever", logo: "/logoUnilever2.png" },
-    // Ajoute d'autres partenaires si nécessaire
+    { id: 8, name: "PALMCI", logo: "/logopalmci.png" },
   ];
 
+  // Animation d'apparition simple
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-      
-      // Animation en séquence
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none"
-        }
-      });
+    // Une simple temporisation pour l'animation d'apparition
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
-      tl.fromTo(
-        headingRef.current,
-        { x: 70, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.7 }
-      )
-      .fromTo(
-        introRef.current,
-        { x: -60, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8 },
-        "-=0.4"
-      )
-      .fromTo(
-        frogRef.current,
-        { y: 0, opacity: 0 },
-        { 
-          y: -20, 
-          opacity: 1, 
-          duration: 0.6,
-          ease: "elastic.out(1, 0.5)"
-        },
-        "-=0.4"
-      )
-      .fromTo(
-        partnersRef.current.children,
-        { y: 30, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          stagger: 0.1,
-          duration: 0.6,
-          ease: "power2.out"
+  // Version simplifiée du défilement automatique
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+    
+    let pauseScroll = false;
+    let scrollInterval;
+    
+    // Défilement simple
+    const startScrolling = () => {
+      scrollInterval = setInterval(() => {
+        if (pauseScroll) return;
+        
+        // Incrémentation du scroll
+        if (container.scrollLeft >= (container.scrollWidth / 2) - 50) {
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft += 1;
         }
-      )
-      .fromTo(
-        ctaRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5 },
-        "+=0.3"
-      );
-
-      // Animation de la grenouille (rebond continue)
-      gsap.to(frogRef.current, {
-        y: -15,
-        duration: 1.5,
-        ease: "bounce.out",
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 1
-      });
-    }
+      }, 30);
+    };
+    
+    // Démarrage avec délai
+    const initTimer = setTimeout(() => {
+      startScrolling();
+    }, 1000);
+    
+    // Gestion des événements
+    const handlePause = () => { pauseScroll = true; };
+    const handleResume = () => { pauseScroll = false; };
+    
+    container.addEventListener("mouseenter", handlePause);
+    container.addEventListener("mouseleave", handleResume);
+    
+    return () => {
+      clearTimeout(initTimer);
+      clearInterval(scrollInterval);
+      container.removeEventListener("mouseenter", handlePause);
+      container.removeEventListener("mouseleave", handleResume);
+    };
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
-      {/* Élément décoratif */}
-      <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-      
+    <section
+      ref={sectionRef}
+      className="py-12 md:py-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden"
+    >
+      {/* Éléments de fond simplifiés */}
+      <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-100 rounded-full opacity-30 dark:opacity-10"></div>
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-200 rounded-full opacity-20 dark:opacity-5"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div  className="text-center mb-16">
-          <h2 ref={headingRef} className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2
+            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-opacity duration-500 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
             Ils nous font <span className="text-blue-600">confiance</span>
           </h2>
-          <p ref={introRef} className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Nous collaborons avec des entreprises innovantes pour créer un impact durable et mesurable.
+          <p
+            className={`text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-opacity duration-500 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Nous collaborons avec des entreprises innovantes pour créer un
+            impact durable et mesurable.
           </p>
         </div>
 
+        {/* Conteneur du carrousel avec indication de défilement */}
         <div 
-          ref={partnersRef}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center"
+          className={`relative pb-8 transition-opacity duration-500 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
         >
-          {partners.map((partner) => (
-            <div 
-              key={partner.id} 
-              className="w-full h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110 group"
-              title={partner.name}
-            >
-              <div className="relative h-16 w-32 md:h-20 md:w-40 rounded flex items-center justify-center">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  className="group-hover:scale-105 transition-transform duration-300"
-                />
+          {/* Indicateurs de défilement */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white to-transparent dark:from-gray-900 w-16 h-full z-10 pointer-events-none opacity-70"></div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white to-transparent dark:from-gray-900 w-16 h-full z-10 pointer-events-none opacity-70"></div>
+
+          {/* Carrousel horizontal optimisé */}
+          <div
+            ref={scrollRef}
+            className="flex gap-8 md:gap-12 lg:gap-16 overflow-x-auto py-4 px-2"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none"
+            }}
+          >
+            {/* Doublement des partenaires pour une boucle fluide */}
+            {[...partners, ...partners].map((partner, index) => (
+              <div
+                key={`${partner.id}-${index}`}
+                className="flex-shrink-0 w-28 sm:w-32 md:w-40 h-16 md:h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 group"
+                title={partner.name}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    sizes="(max-width: 640px) 7rem, (max-width: 768px) 8rem, 10rem"
+                    style={{ objectFit: "contain" }}
+                    className="transition-transform duration-300"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
