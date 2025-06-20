@@ -39,7 +39,7 @@ const iconMap: Record<string, React.ElementType> = {
 export default function FunctionalitiesSection({ title, items }: FunctionalitiesSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const itemsRef = useRef<(HTMLAnchorElement | null)[]>([]);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -134,7 +134,7 @@ export default function FunctionalitiesSection({ title, items }: Functionalities
             <a 
               href={item.link}
               key={index}
-              ref={el => itemsRef.current[index] = el}
+              ref={el => { itemsRef.current[index] = el; }}
               className="flex flex-col items-center hover:bg-gray-200 dark:hover:bg-gray-800 p-5 transition"
             >
               <div className="bg-white dark:bg-gray-700 rounded-full p-4 shadow-md mb-3">

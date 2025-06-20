@@ -50,23 +50,23 @@ export default function Equipe({ isLoaded }: EquipeProps) {
   const teamMembers = [
     {
       name: 'Evariste Kouassi',
-      role: 'Directrice Générale',
+      role: 'Employé',
       image: '/personne1.jpg',
     },
     {
       name: 'Chonou Oriane',
-      role: 'Directeur Technique',
+      role: 'Employée',
       image: '/personne2.jpg',
     },
     {
       name: 'Emmanuel Yao',
-      role: 'Responsable Créative',
+      role: 'Employé',
       image: '/personne1.jpg',
     },
     {
       name: 'Boris Yakoué',
-      role: 'Développeur Senior',
-      image: '/personne2.jpg',
+      role: 'Employé',
+      image: '/personne1.jpg',
     },
   ];
 

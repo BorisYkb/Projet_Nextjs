@@ -45,8 +45,8 @@ const EventCarousel = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovering, setIsHovering] = useState(null);
-  const timerRef = useRef(null);
+  const [isHovering, setIsHovering] = useState<number | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const titleref = useRef(null);
   const introref = useRef(null);
 
@@ -66,7 +66,11 @@ const EventCarousel = () => {
       nextSlide();
     }, 3000);
 
-    return () => clearInterval(timerRef.current);
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -97,7 +101,9 @@ const EventCarousel = () => {
 
   // Pause du défilement lors du survol
   const handleMouseEnter = () => {
-    clearInterval(timerRef.current);
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
   };
 
   // Reprise du défilement à la sortie du survol

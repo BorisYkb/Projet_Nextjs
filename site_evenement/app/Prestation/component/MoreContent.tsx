@@ -57,7 +57,7 @@ export default function MoreContent({ title, buttonLabel, items }: MoreContentPr
           {items.map((content, index) => (
             <div
               key={index}
-              ref={el => cardsRef.current[index] = el}
+              ref={el => { cardsRef.current[index] = el; }}
               className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             >
               <div className="relative h-48">

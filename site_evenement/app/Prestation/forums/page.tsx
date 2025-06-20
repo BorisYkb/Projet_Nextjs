@@ -22,6 +22,7 @@ export default function ForumPage() {
 
   return (
     <main className="bg-white">
+
       {/* Hero Section avec les données spécifiques */}
       <HeroSection isLoaded={isLoaded} data={forumData.hero} />
 

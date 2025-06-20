@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 
 const InvitationSection = () => {
   // Références pour les animations GSAP
-  const sectionRef = useRef(null);
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const buttonsRef = useRef(null);
-  const gsapRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const subtitleRef = useRef<HTMLParagraphElement | null>(null);
+  const buttonsRef = useRef<HTMLDivElement | null>(null);
+  const gsapRef = useRef<any>(null);
 
   useEffect(() => {
     // Chargement dynamique de GSAP
@@ -55,22 +55,27 @@ const InvitationSection = () => {
     );
     
     // Animation des boutons
-    gsap.fromTo(
-      buttonsRef.current.children,
-      { y: 20, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8, 
-        delay: 0.9,
-        stagger: 0.2,
-        ease: "power2.out" 
-      }
-    );
+    if (buttonsRef.current) {
+      gsap.fromTo(
+        buttonsRef.current.children,
+        { y: 20, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 0.8, 
+          delay: 0.9,
+          stagger: 0.2,
+          ease: "power2.out" 
+        }
+      );
+    }
   };
 
   // Animation au survol des boutons
-  const handleButtonHover = (e, isEntering) => {
+  const handleButtonHover = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    isEntering: boolean
+  ) => {
     if (!gsapRef.current) return;
     
     gsapRef.current.to(e.currentTarget, {

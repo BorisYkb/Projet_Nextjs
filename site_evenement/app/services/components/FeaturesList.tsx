@@ -48,7 +48,7 @@ export default function Features({ features }: FeaturesProps) {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            ref={el => (cardsRef.current[index] = el)}
+                            ref={el => { cardsRef.current[index] = el }}
                             className="p-6 rounded-2xl shadow-md bg-gray-50 border border-gray-100 dark:bg-gray-700 dark:border-gray-800 hover:shadow-lg transition duration-300"
                         >
                             <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 text-white bg-indigo-600 rounded-full">

@@ -20,7 +20,7 @@ export default function Navbar() {
   
   
   const [isPresentationOpen, setIsPresentationOpen] = useState(false);
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {

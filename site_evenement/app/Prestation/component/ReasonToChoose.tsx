@@ -84,7 +84,7 @@ export default function ReasonToChoose({ title, blocks }: ReasonToChooseProps) {
           {blocks.map((block, index) => (
             <div 
               key={index}
-              ref={el => blockRefs.current[index] = el}
+              ref={el => { blockRefs.current[index] = el; }}
               className={`${block.bgColor} dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden`}
             >
               <div className="p-6">

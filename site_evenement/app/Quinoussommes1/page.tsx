@@ -32,17 +32,19 @@ export default function QuiNousSommes() {
       const sections = [missionRef.current, teamRef.current, valuesRef.current, historyRef.current];
       
       sections.forEach(section => {
-        gsap.from(section.querySelectorAll('.animate-item'), {
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 75%',
-          },
-          opacity: 0,
-          y: 30,
-          stagger: 0.2,
-          duration: 0.8,
-          ease: 'power2.out'
-        });
+        if (section) {
+          gsap.from((section as Element).querySelectorAll('.animate-item'), {
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 75%',
+            },
+            opacity: 0,
+            y: 30,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: 'power2.out'
+          });
+        }
       });
     }
   }, []);
