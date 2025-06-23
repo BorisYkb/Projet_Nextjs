@@ -8,14 +8,14 @@ export default function UpcomingEvents() {
       id: 1,
       title: "Assemblée Générale de la Société Générale de Côte d'Ivoire",
       date: "20 Mai 2025",
-      location: "Hôtel du Palais, Cannes",
+      location: "Sofitel, Abidjan",
       link: "/events/heavent-meetings-cannes"
     },
     {
         id: 2,
         title: "Assemblée Générale de la Société Générale de Côte d'Ivoire",
         date: "20 Mai 2025",
-        location: "Hôtel du Palais, Cannes",
+        location: "Novotel, Abidjan",
         link: "/events/heavent-meetings-cannes"
     }
   ];
