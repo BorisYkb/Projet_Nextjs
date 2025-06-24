@@ -122,7 +122,7 @@ export default function WhyChoose({ title, items, bgColor }: WhyChooseProps) {
           {items.map((item, index) => (
             <div 
               key={index}
-              ref={el => itemRefs.current[index] = el}
+              ref={el => { itemRefs.current[index] = el; }}
               className="bg-white dark:bg-gray-700 rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex justify-center">

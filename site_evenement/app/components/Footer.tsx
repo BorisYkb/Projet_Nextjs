@@ -9,7 +9,7 @@ import  footerData from '../data/footer.json'; // Import des données JSON
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-  const footerRef = useRef(null);
+  const footerRef = useRef<HTMLElement | null>(null);
   const columnRefs = useRef<HTMLDivElement[]>([]);
   const logoRef = useRef(null);
   const copyrightRef = useRef(null);
@@ -79,7 +79,7 @@ const Footer = () => {
       className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-black text-gray-100 px-6 pt-20 pb-10 overflow-hidden" id='Footer'>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Logo + description */}
-        <div ref={(el) => (columnRefs.current[0] = el!)} className="space-y-4">
+        <div ref={(el) => { columnRefs.current[0] = el!; }} className="space-y-4">
           <div ref={logoRef} className="flex items-center space-x-3">
             <div className="bg-blue-500 h-10 w-10 rounded-full flex items-center justify-center text-white font-bold text-xl">
               {logo.icon}
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         {/* Services */}
-        <div ref={(el) => (columnRefs.current[1] = el!)} className="space-y-4">
+        <div ref={(el) => { columnRefs.current[1] = el!; }} className="space-y-4">
           <h3 className="text-lg font-semibold border-b border-blue-500 pb-2 inline-block">Nos Services</h3>
           <ul className="space-y-2 text-sm">
             {services.map((service, idx) => (
@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Liens utiles */}
-        <div ref={(el) => (columnRefs.current[2] = el!)} className="space-y-4">
+        <div ref={(el) => { columnRefs.current[2] = el!; }} className="space-y-4">
           <h3 className="text-lg font-semibold border-b border-blue-500 pb-2 inline-block">Liens utiles</h3>
           <ul className="space-y-2 text-sm">
             {useful_links.map((link, idx) => (
@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div ref={(el) => (columnRefs.current[3] = el!)} className="space-y-4">
+        <div ref={(el) => { columnRefs.current[3] = el!; }} className="space-y-4">
           <h3 className="text-lg font-semibold border-b border-blue-500 pb-2 inline-block">Contact</h3>
           <div className="text-sm space-y-3">
             <div className="flex items-start space-x-2">

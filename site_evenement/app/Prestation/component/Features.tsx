@@ -78,7 +78,7 @@ export default function Features({ title, items, bgColor }: FeaturesProps) {
             {items.map((item, index) => (
               <li 
                 key={index}
-                ref={el => itemsRef.current[index] = el}
+                ref={el => { itemsRef.current[index] = el; }}
                 className="flex items-start"
               >
                 <span className="text-green-500 dark:text-green-400 mr-3 mt-1">

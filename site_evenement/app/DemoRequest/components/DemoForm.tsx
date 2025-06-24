@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import options from '@/app/data/options.json'
+import options from '../../data/options.json'
 
 export default function DemoForm() {
   const formRef = useRef<HTMLDivElement | null>(null)
@@ -16,7 +16,13 @@ export default function DemoForm() {
     message: ''
   })
 
-  const [errors, setErrors] = useState({})
+  type Errors = {
+    name?: string
+    email?: string
+    company?: string
+    eventType?: string
+  }
+  const [errors, setErrors] = useState<Errors>({})
 
   useEffect(() => {
     if (formRef.current) {

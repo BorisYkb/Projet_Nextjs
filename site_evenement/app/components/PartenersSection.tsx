@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export default function PartnersSection() {
-  const sectionRef = useRef(null);
-  const scrollRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   const partners = [
@@ -35,7 +35,7 @@ export default function PartnersSection() {
     if (!container) return;
     
     let pauseScroll = false;
-    let scrollInterval;
+    let scrollInterval: NodeJS.Timeout;
     
     // Défilement simple
     const startScrolling = () => {
